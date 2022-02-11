@@ -1,7 +1,19 @@
+/*
+ * Author: Aguirre Ramírez Leonardo
+ * Date: 26/12/2010
+ * Description: This program apply blur effect to an image called 'original.jpg' using a Gaussian Kernel,
+ * stb-master library is implemented to read/write information in an image file, omp library is used to 
+ * parallelize the process.
+ * The program create 2 final files, 'blurred_parallel.jpg' and 'blurred_441.jpg' the difference
+ * beetwen the images is that an image is processed by a sequential process, and the other one
+ * is processed by a parallel process.
+*/
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <omp.h>
- 
+
 #define STB_IMAGE_IMPLEMENTATION
 #include "stb-master/stb_image.h"
 #define STB_IMAGE_WRITE_IMPLEMENTATION
@@ -129,13 +141,6 @@ int main(int argc, char const *argv[]){
     stbi_image_free(blurImg);
     
     //Getting the total time
-    printf("Fin de paralelo en tiempo: %f\n",t2-t1);
-    
-    
-    
-    
-  	return 0;
-				
+    printf("Fin de paralelo en tiempo: %f\n",t2-t1);    
+  	return 0;				
 }
-		
-	
