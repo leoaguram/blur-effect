@@ -1,6 +1,6 @@
 /*
  * Author: Aguirre Ramírez Leonardo
- * Date: 26/12/2010
+ * Date: 26/12/2018
  * Description: This program apply blur effect to an image called 'original.jpg' using a Gaussian Kernel,
  * stb-master library is implemented to read/write information in an image file, omp library is used to 
  * parallelize the process.
